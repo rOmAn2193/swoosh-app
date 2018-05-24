@@ -49,6 +49,9 @@
                                 <state key="normal" title="GET STARTED">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="7EA-dI-yDa" kind="show" id="iyj-h1-ZtF"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ON GOING ALL OUT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zi0-IY-i8a">
                                 <rect key="frame" x="57.5" y="203" width="260" height="36"/>
@@ -172,6 +175,17 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEp-z4-osS">
+                                <rect key="frame" x="0.0" y="30" width="44" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="R5z-b9-vCE"/>
+                                    <constraint firstAttribute="width" constant="44" id="inD-47-Mx0"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="M8x-B8-8Ud" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="0ft-NM-eah"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -180,6 +194,8 @@
                             <constraint firstItem="TvB-KV-onB" firstAttribute="leading" secondItem="5C4-FR-ARz" secondAttribute="leading" id="9k4-fD-ysH"/>
                             <constraint firstItem="5C4-FR-ARz" firstAttribute="trailing" secondItem="TvB-KV-onB" secondAttribute="trailing" id="AB1-1N-laO"/>
                             <constraint firstItem="5C4-FR-ARz" firstAttribute="bottom" secondItem="TvB-KV-onB" secondAttribute="bottom" constant="20" id="Cr7-4P-rLt"/>
+                            <constraint firstItem="kEp-z4-osS" firstAttribute="leading" secondItem="5C4-FR-ARz" secondAttribute="leading" id="PZF-3d-otf"/>
+                            <constraint firstItem="kEp-z4-osS" firstAttribute="top" secondItem="5C4-FR-ARz" secondAttribute="top" constant="10" id="VTF-SR-ewX"/>
                             <constraint firstItem="5C4-FR-ARz" firstAttribute="trailing" secondItem="UAi-dC-SAR" secondAttribute="trailing" id="WNY-tp-SXA"/>
                             <constraint firstItem="5C4-FR-ARz" firstAttribute="trailing" secondItem="ayW-kA-xyn" secondAttribute="trailing" id="a3l-dy-0dV"/>
                             <constraint firstItem="VBr-xh-sCA" firstAttribute="top" secondItem="kP5-72-qL5" secondAttribute="top" id="ema-le-tZh"/>
@@ -193,6 +209,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kB8-hM-eeG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="M8x-B8-8Ud" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="816.79999999999995" y="118.29085457271366"/>
         </scene>
@@ -225,11 +242,11 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="r0K-Cy-KAk">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="r0K-Cy-KAk">
                                 <rect key="frame" x="0.0" y="156" width="375" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kCR-pX-JqH" customClass="BorderButton" customModule="swoosh_app" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="186" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="180.5" height="50"/>
                                         <color key="backgroundColor" red="0.26746680699999997" green="0.26746680699999997" blue="0.26746680699999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="oLG-DV-nhT"/>
@@ -240,7 +257,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uwu-e7-9ld" customClass="BorderButton" customModule="swoosh_app" customModuleProvider="target">
-                                        <rect key="frame" x="189" y="0.0" width="186" height="50"/>
+                                        <rect key="frame" x="194.5" y="0.0" width="180.5" height="50"/>
                                         <color key="backgroundColor" red="0.26746680699999997" green="0.26746680699999997" blue="0.26746680699999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="bUW-sY-Kqw"/>
@@ -291,6 +308,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="29" height="24"/>
         <image name="beginnerBallerBG" width="414" height="736"/>
         <image name="desiredLeagueBG" width="414" height="736"/>
         <image name="swooshLogo" width="119" height="20"/>
